@@ -202,7 +202,8 @@
                             <!-- .list-inline>ul>li*2>a>i.ri-search-lin -->
                             <div class="list-inline">
                                 <ul>
-                                    <li><a href=""><i class="ri-search-line"></i></a></li>
+                                    <!-- Le incluimos aqui el id (id="search-float") de abajo-->
+                                    <li><a href="#0" trigger-button data-target="search-float"><i class="ri-search-line"></i></a></li>
                                     <li><a href=""><span class="item-floating">0</span><i class="ri-shopping-bag-line"></i></a></li>
                                 </ul>
                             </div>
@@ -215,7 +216,8 @@
                         <form action="" class="search">
                             <i class="ri-search-line"></i>
                             <input type="search" class="input" id="" placeholder="Search Products">
-                            <i class="ri-close-line"></i>
+                            <!-- Luego de cre1ado el SCRIP me traje (close-button) -->
+                            <i class="ri-close-line" close-button></i>
                         </form>
                     </div>
                 </div>
@@ -226,7 +228,7 @@
         <footer>FOOTer</footer>
     </div>
     
-
+    <div class="overlay" data-overlay></div>
     <script src="script.js"></script>
 </body>
 </html>
