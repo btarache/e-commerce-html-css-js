@@ -150,6 +150,21 @@ h3 {font-size: 1em;}
     }
 }
 
+.dot-title {
+    font-family: var(--primary-font);
+    font-size: var(--fs14);
+    font-weight: var(--fw600);
+    line-height: 34px;
+}
+.dot-title a {
+    transition: var(--transition-color);
+}
+.dot-title a:hover,
+.dotgrid .product-price .before {
+    color: var(--light-color);
+}
+
+
 
 /* -------------------- *
     #HEADER
@@ -303,7 +318,7 @@ h3 {font-size: 1em;}
 .dotgrid .dot-info {
     text-align: center;
 }
-.dot-title {
+/* .dot-title {
     font-family: var(--primary-font);
     font-size: var(--fs14);
     font-weight: var(--fw600);
@@ -312,9 +327,64 @@ h3 {font-size: 1em;}
 .dot-title a {
     transition: var(--transition-color);
 }
-.dot-title a:hover {
+.dot-title a:hover,
+.dotgrid .product-price .before {
     color: var(--light-color);
+} */
+.dotgrid .product-price .before {
+    text-decoration: line-through;
 }
+
+
+/*
+    HEADER SEARCH
+*/
+
+.inner-header .search-float {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    height: 80px;
+    background-color:  var(--white-color);
+    z-index: 1000;
+    display: none;
+}
+form.search {
+    position: relative;
+}
+form.search :where(i) {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+form.search .input {
+    outline: 0;
+    padding: 15px 50px;
+}
+form.search i {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 100%;
+    cursor: pointer;
+}
+form.search :where(i:last-child) {
+    left: auto;
+    right: 0;
+} 
+.inner-header .search .input {
+    display: flex;
+    border: 0;
+    height: 80px;
+    font-size: 18px;
+}
+
+
+
 
 
 @media (min-width: 992px) {
@@ -329,11 +399,24 @@ h3 {font-size: 1em;}
     }
 
     /* SubMenu */
+
+    .mega-content {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 60px;
+    }
+    .mega-content .links {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
+        gap: 15px;    
+    } 
+
+
     nav.menu .sub-mega {
         left: 0;
         right: 0;
         padding: 50px 0;
-        display: block;
+        /* display: block; */
     }
     nav.menu :where(.sub-menu, .sub-mega) {
         position: absolute;
@@ -358,23 +441,19 @@ h3 {font-size: 1em;}
     }
 
 
-/*
-    @keyframes fade-bottom {
-        0% {
-            transform: translateY(10px);
-            opacity: 0;
-        }
-        100% {
-            transform: translateY(0);
-            opacity: 1;
-        }
+
+}
+
+
+
+@media (min-width: 1200px) {
+    .container .wide {
+        --mx-width: 1720px;
+        --gutter: 40px;
     }
-*/
-
-
-    
-
-
-
-
+}
+@media (min-width: 1400px) {
+    .mega-content {
+        grid-template-columns: 1fr 1fr;
+    }
 }
