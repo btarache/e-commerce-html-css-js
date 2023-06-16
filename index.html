@@ -8,6 +8,7 @@
     <title>E-Commerce</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 </head>
 <body>
     <!-- #page.page-home>header+main+footer -->
@@ -227,8 +228,86 @@
 
             </div>
         </header>
-        <!-- <main>MAIN</main>
-        <footer>FOOTer</footer> -->
+        <main>
+            <!-- https://swiperjs.com/ -> get started -. Use Swiper from CDN -> copiolink y script -->
+            
+            <!-- .slider>.sliderbox>.wrap>.item -->
+            <div class="slider">
+                <div class="sliderbox swiper">  <!-- agrego la clas♂ SWIPER-->
+                    <div class="wrap swiper-wrapper"> <!-- swiper-wrapper -->
+                        
+                        <div class="item swiper-slide"> <!--  swiper-slide -->
+                            <!-- .image>.ob-cover+.title-info -->
+                            <div class="image">
+                                <div class="ob-cover">
+                                    <img src="assets/slider_01.jpg" alt="">
+                                </div>
+                                <div class="title-info">
+                                    <div class="container wide">
+                                        <div class="wrap">
+                                            <span class="price">$22</span>
+                                            <h3 class="title">Oh Si</h3>
+                                            <div class="button">
+                                                <a href="" class="primary-btn">Shop Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item swiper-slide"> <!--  swiper-slide -->
+                            <!-- .image>.ob-cover+.title-info -->
+                            <div class="image">
+                                <div class="ob-cover">
+                                    <img src="assets/slider_02.jpg" alt="">
+                                </div>
+                                <div class="title-info">
+                                    <div class="container wide">
+                                        <div class="wrap">
+                                            <span class="price">$12</span>
+                                            <h3 class="title">Compra</h3>
+                                            <div class="button">
+                                                <a href="" class="primary-btn">Shop Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item swiper-slide"> <!--  swiper-slide -->
+                            <!-- .image>.ob-cover+.title-info -->
+                            <div class="image">
+                                <div class="ob-cover">
+                                    <img src="assets/slider_03.jpg" alt="">
+                                </div>
+                                <div class="title-info">
+                                    <div class="container wide">
+                                        <div class="wrap">
+                                            <span class="price">$50</span>
+                                            <h3 class="title">Ofertas</h3>
+                                            <div class="button">
+                                                <a href="" class="primary-btn">Shop Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="custom-pagination">
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    
+                </div>
+            </div><!-- /Slider -->
+            
+        </main>
+
+        <footer>FOOTer</footer>
     </div>
     
     <div class="overlay" data-overlay></div>
@@ -294,6 +373,7 @@
             </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

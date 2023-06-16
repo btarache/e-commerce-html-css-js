@@ -30,3 +30,37 @@ submenu.forEach((menu) => menu.addEventListener('click' , function(e) {
         this.closest('.has-child').classList.toggle('active');
     }
 }))
+
+
+
+
+//SLIDER
+
+// Este codigo me lo traje de SWIPER: https://swiperjs.com/get-started
+// -> Initialize Swiper
+
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    
+    // direction: 'vertical',  <- este se elimina
+    loop: true,
+    effect: 'fade',
+    autoHeight: true,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,  //IMPORTANTE
+    },
+  
+    // Navigation arrows
+    // navigation: {
+      // nextEl: '.swiper-button-next',
+      // prevEl: '.swiper-button-prev',
+    // },
+  
+    // And if we need scrollbar
+    // scrollbar: {
+      // el: '.swiper-scrollbar',
+    // },
+  });
