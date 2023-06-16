@@ -1,5 +1,4 @@
 // SEARCH
-
 const triggerOpen = document.querySelectorAll('[trigger-button]');
 const triggerClose = document.querySelectorAll('[close-button]');
 const overlay = document.querySelector('[data-overlay]'); 
@@ -20,3 +19,14 @@ const overlay = document.querySelector('[data-overlay]');
         targetEl.querySelector('[close-button]').addEventListener('click' , openData);
         overlay.addEventListener('click' , openData);
     }
+
+
+//MOBILE MENU
+const submenu = document.querySelectorAll('.child-trigger');
+submenu.forEach((menu) => menu.addEventListener('click' , function(e) {
+    e.preventDefault();
+    submenu.forEach((item) => item != this ? item.closest('.has-child').classList.remove('active') : null);
+    if(this.closest('.has-child').classList != 'active') {
+        this.closest('.has-child').classList.toggle('active');
+    }
+}))
